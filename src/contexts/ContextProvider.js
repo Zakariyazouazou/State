@@ -1,12 +1,8 @@
 import React , {createContext , useContext , useState} from 'react';
-
-
-
-
 const StateContext = createContext() ; 
-
-
 //hathome besh tkhali nav barre well taswira ta3 icone tekhtafi
+
+
 const initialisation = {
     chat: false,
     cart: false,
@@ -44,7 +40,10 @@ export const ContextProvider = ({children})=>{
                     setisClick, 
                     handleClick, setColor , setMode ,
                     screensize , Setscreensize,
-                    currentColor , setcurrentColor,CurrentMode , setCurrentMode,themSettings , setthemSettings , setMode ,  setColor
+                    currentColor , setcurrentColor,
+                    CurrentMode , setCurrentMode,
+                    themSettings , setthemSettings , 
+                    setMode ,  setColor
                     }}  
         >
               {children}
@@ -52,7 +51,6 @@ export const ContextProvider = ({children})=>{
      )
 }
 
-//setColor , setMode , CurrentMode , currentColor , setthemSettings
 
 
 export const useStateContext = () => useContext(StateContext)
